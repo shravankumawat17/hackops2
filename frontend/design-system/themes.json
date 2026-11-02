@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json.schemastore.org/component-design-tokens",
+  "name": "HackOps Design System",
+  "description": "Pre-configured theme presets for hackathon day. Coding agents must pick or confirm one preset and apply its CSS variables globally.",
+  "presets": {
+    "neo-agentic": {
+      "name": "Neo-Agentic Slate & Indigo",
+      "bestFor": "AI Agents, Dev Tools, Intelligent Automation, HackOps",
+      "tokens": {
+        "light": {
+          "--background": "220 20% 98%",
+          "--foreground": "224 71% 4%",
+          "--card": "0 0% 100%",
+          "--card-foreground": "224 71% 4%",
+          "--primary": "239 84% 67%",
+          "--primary-foreground": "0 0% 100%",
+          "--muted": "220 14% 94%",
+          "--muted-foreground": "220 9% 46%",
+          "--border": "220 13% 91%",
+          "--ring": "239 84% 67%"
+        },
+        "dark": {
+          "--background": "228 15% 7%",
+          "--foreground": "210 20% 98%",
+          "--card": "228 14% 11%",
+          "--card-foreground": "210 20% 98%",
+          "--primary": "239 84% 67%",
+          "--primary-foreground": "0 0% 100%",
+          "--muted": "228 12% 16%",
+          "--muted-foreground": "220 10% 60%",
+          "--border": "228 12% 18%",
+          "--ring": "239 84% 67%"
+        }
+      }
+    },
+    "cyber-emerald": {
+      "name": "Cyber Emerald & Obsidian",
+      "bestFor": "Infrastructure, Security, High-Performance Systems, Terminal/CLI",
+      "tokens": {
+        "light": {
+          "--background": "140 20% 98%",
+          "--foreground": "150 50% 10%",
+          "--card": "0 0% 100%",
+          "--card-foreground": "150 50% 10%",
+          "--primary": "160 84% 39%",
+          "--primary-foreground": "0 0% 100%",
+          "--muted": "140 10% 93%",
+          "--muted-foreground": "140 8% 45%",
+          "--border": "140 12% 88%",
+          "--ring": "160 84% 39%"
+        },
+        "dark": {
+          "--background": "160 20% 5%",
+          "--foreground": "140 20% 96%",
+          "--card": "160 18% 8%",
+          "--card-foreground": "140 20% 96%",
+          "--primary": "158 75% 50%",
+          "--primary-foreground": "160 50% 8%",
+          "--muted": "160 14% 14%",
+          "--muted-foreground": "150 10% 60%",
+          "--border": "160 14% 16%",
+          "--ring": "158 75% 50%"
+        }
+      }
+    },
+    "monochrome-noir": {
+      "name": "Monochrome Noir & Titanium",
+      "bestFor": "Minimalist B2B SaaS, Technical Platforms, Ultra-clean Products",
+      "tokens": {
+        "light": {
+          "--background": "0 0% 99%",
+          "--foreground": "0 0% 9%",
+          "--card": "0 0% 100%",
+          "--card-foreground": "0 0% 9%",
+          "--primary": "0 0% 9%",
+          "--primary-foreground": "0 0% 98%",
+          "--muted": "0 0% 94%",
+          "--muted-foreground": "0 0% 45%",
+          "--border": "0 0% 89%",
+          "--ring": "0 0% 9%"
+        },
+        "dark": {
+          "--background": "0 0% 5%",
+          "--foreground": "0 0% 98%",
+          "--card": "0 0% 9%",
+          "--card-foreground": "0 0% 98%",
+          "--primary": "0 0% 98%",
+          "--primary-foreground": "0 0% 9%",
+          "--muted": "0 0% 14%",
+          "--muted-foreground": "0 0% 60%",
+          "--border": "0 0% 18%",
+          "--ring": "0 0% 98%"
+        }
+      }
+    },
+    "electric-violet": {
+      "name": "Electric Violet & Midnight",
+      "bestFor": "Consumer, Creative AI, Web3, Interactive Showcases",
+      "tokens": {
+        "light": {
+          "--background": "270 20% 98%",
+          "--foreground": "270 50% 10%",
+          "--card": "0 0% 100%",
+          "--card-foreground": "270 50% 10%",
+          "--primary": "265 89% 66%",
+          "--primary-foreground": "0 0% 100%",
+          "--muted": "270 12% 93%",
+          "--muted-foreground": "270 10% 45%",
+          "--border": "270 12% 88%",
+          "--ring": "265 89% 66%"
+        },
+        "dark": {
+          "--background": "260 25% 6%",
+          "--foreground": "270 20% 96%",
+          "--card": "260 22% 10%",
+          "--card-foreground": "270 20% 96%",
+          "--primary": "265 89% 66%",
+          "--primary-foreground": "0 0% 100%",
+          "--muted": "260 16% 15%",
+          "--muted-foreground": "260 12% 62%",
+          "--border": "260 16% 18%",
+          "--ring": "265 89% 66%"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_comment": "Tunable demo rules. Keep every threshold here so the pitch can say 'configurable' and mean it.",
+  "clustering": {
+    "window_hours": 24,
+    "min_buildings_for_municipal_case": 3,
+    "min_complaints_for_any_case": 2,
+    "sibling_normal_tolerance": {
+      "turbidity_ntu_max": 1.0,
+      "chlorine_mgl_min": 0.2,
+      "note": "Sibling buildings on the same distributor must be inside these bounds to route BUILDING_SIDE."
+    }
+  },
+  "severity": {
+    "High": "any permissible-limit breach OR coliform present OR 5+ buildings affected",
+    "Medium": "acceptable-limit breach OR 3-4 buildings affected",
+    "Low": "single building, no sensor breach"
+  },
+  "forecast": {
+    "horizon_hours": 24,
+    "chlorine_minimum_mgl": 0.2,
+    "method": "first-order decay C_out = C_in * exp(-k * travel_time); k grows with pipe age and smaller diameter"
+  },
+  "anomaly": {
+    "method": "z-score against the same hour on previous days (time-of-day baseline)",
+    "z_threshold": 2.5,
+    "rolling_window_hours": 24
+  },
+  "escalation": {
+    "enabled": true,
+    "high_severity_no_action_hours": 2,
+    "note": "Demo timer, not a real SLA."
+  }
+}

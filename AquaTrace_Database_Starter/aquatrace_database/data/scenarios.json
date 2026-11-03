@@ -1,0 +1,23 @@
+[
+  {
+    "id": "S1_plant_fault",
+    "now": "2026-11-05T21:00:00",
+    "expected_stage": "plant/source",
+    "expected_route": "plant operators",
+    "why": "plant turbidity spike + complaints in multiple zones"
+  },
+  {
+    "id": "S2_pipeline_fault",
+    "now": "2026-11-06T20:00:00",
+    "expected_stage": "distribution pipeline",
+    "expected_route": "BMC",
+    "why": "plant normal, several buildings under seg_02 complaining"
+  },
+  {
+    "id": "S3_home_fault",
+    "now": "2026-11-07T11:00:00",
+    "expected_stage": "household plumbing",
+    "expected_route": "citizen + nearby plumbers",
+    "why": "plant normal, single household, no neighbors"
+  }
+]

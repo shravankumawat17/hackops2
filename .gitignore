@@ -1,0 +1,5 @@
+backend/.env
+.env
+.env.local
+imported-backend/**/__pycache__/
+imported-backend/**/*.db

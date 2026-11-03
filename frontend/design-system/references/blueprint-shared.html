@@ -1,0 +1,56 @@
+<style>
+div,section,main,aside,header,nav,footer,button {display:flex;flex-direction:column;}
+.shell{width:1440px;height:1000px;flex-direction:row;background:#f9fafb;font-family:Inter;color:#111827;}
+.sidebar{width:216px;height:1000px;padding:32px 24px;gap:32px;background:#ffffff;border-right:1px solid #e5e7eb;}
+.brand{flex-direction:row;gap:8px;align-items:center;}
+.brandname{font-size:24px;font-weight:600;color:#111827;}
+.nav{gap:8px;}
+.navitem{padding:12px;border-radius:8px;flex-direction:row;gap:12px;align-items:center;}
+.navitem:hover{background:#eef2ff;}
+.navitem:hana-active{background:#e0e7ff;}
+.navtext{font-size:14px;color:#4b5563;}
+.navactive{background:#eef2ff;}
+.navactive .navtext{color:#4f46e5;}
+.content{width:1224px;padding:24px 32px;gap:24px;}
+.topbar{flex-direction:row;gap:24px;align-items:center;}
+.eyebrow{font-size:12px;font-weight:500;color:#6b7280;}
+.small{font-size:12px;color:#6b7280;}
+.body{font-size:14px;color:#374151;}
+.title{font-size:30px;font-weight:600;color:#111827;}
+.heading{font-size:18px;font-weight:600;color:#111827;}
+.row{flex-direction:row;gap:16px;align-items:center;}
+.col{gap:8px;}
+.panel{padding:24px;gap:16px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;}
+.primary{padding:8px 12px;background:#4f46e5;border-radius:6px;flex-direction:row;gap:8px;align-items:center;}
+.primary span{font-size:14px;font-weight:500;color:#ffffff;}
+.primary:hover{background:#4338ca;}.primary:hana-active{background:#3730a3;}
+.secondary{padding:8px 12px;background:#ffffff;border:1px solid #d1d5db;border-radius:6px;flex-direction:row;gap:8px;align-items:center;}
+.secondary span{font-size:14px;color:#374151;}
+.secondary:hover{background:#f3f4f6;}.secondary:hana-active{background:#e5e7eb;}
+.badge{padding:4px 8px;background:#eef2ff;border-radius:6px;}
+.badge span{font-size:12px;color:#4338ca;}
+.danger{background:#fef2f2;}.danger span{color:#b91c1c;}
+.warning{background:#fffbeb;}.warning span{color:#92400e;}
+.good{background:#ecfdf5;}.good span{color:#047857;}
+.disclaimer{padding:12px 16px;background:#f3f4f6;border-radius:8px;}
+.disclaimer p{font-size:12px;color:#4b5563;}
+</style>
+<!-- Shared desktop shell: replace ACTIVE class only; insert screen content after header. -->
+<div class="shell" aria-label="AquaTrace workspace">
+<aside class="sidebar" aria-label="Main navigation">
+<div class="brand" aria-label="AquaTrace brand"><iconify-icon icon="lucide:droplets" width="24" style="color:#4f46e5;"></iconify-icon><span class="brandname" data-singleline>AquaTrace</span></div>
+<div class="col" aria-label="Workspace"><span class="eyebrow" data-singleline>OPERATIONS WORKSPACE</span><span class="body" data-singleline>Municipal water network</span></div>
+<nav class="nav" aria-label="Page navigation">
+<button class="navitem OVERVIEW_ACTIVE" aria-label="Overview"><iconify-icon icon="lucide:layout-dashboard" width="18" style="color:#6b7280;"></iconify-icon><span class="navtext" data-singleline>Overview</span></button>
+<button class="navitem NETWORK_ACTIVE" aria-label="Network"><iconify-icon icon="lucide:workflow" width="18" style="color:#6b7280;"></iconify-icon><span class="navtext" data-singleline>Network</span></button>
+<button class="navitem CASE_ACTIVE" aria-label="Cases"><iconify-icon icon="lucide:folder-open" width="18" style="color:#6b7280;"></iconify-icon><span class="navtext" data-singleline>Cases</span></button>
+<button class="navitem" aria-label="Standards"><iconify-icon icon="lucide:book-open" width="18" style="color:#6b7280;"></iconify-icon><span class="navtext" data-singleline>Standards</span></button>
+</nav>
+<div class="col" aria-label="Demo environment"><span class="eyebrow" data-singleline>DEMO ENVIRONMENT</span><span class="small">Synthetic sample data</span><span class="small">Offline-ready seeded scenarios</span></div>
+<div class="col" aria-label="Role"><span class="eyebrow" data-singleline>VIEWING AS</span><span class="body" data-singleline>Municipal officer</span></div>
+</aside>
+<main class="content" aria-label="Main content">
+<header class="topbar" aria-label="Workspace header"><span class="small" style="width:780px;" data-singleline>AquaTrace / Municipal operations</span><div class="badge" aria-label="Prototype label"><span data-singleline>Design blueprint · v1</span></div></header>
+<!-- SCREEN_CONTENT -->
+<div class="disclaimer" aria-label="Human judgment disclaimer"><p>Automated findings support human judgment. They are not official regulatory decisions.</p></div>
+</main></div>

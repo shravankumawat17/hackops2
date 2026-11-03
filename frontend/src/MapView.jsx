@@ -51,8 +51,7 @@ function makeTiles(mode){
     attribution:config.attribution,
     updateWhenIdle:false,
     updateWhenZooming:false,
-    keepBuffer:4,
-    crossOrigin:true
+    keepBuffer:4
   });
 }
 
@@ -71,6 +70,7 @@ export default function NetworkMap({stations=[],nodes=[],onSelect,full=false}){
 
   useEffect(()=>{
     if(!canvasRef.current||mapRef.current)return;
+    const reduceMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     const map=L.map(canvasRef.current,{
       center:MUMBAI,
       zoom:12,
@@ -78,14 +78,14 @@ export default function NetworkMap({stations=[],nodes=[],onSelect,full=false}){
       maxZoom:20,
       zoomControl:false,
       attributionControl:false,
-      zoomAnimation:true,
-      fadeAnimation:true,
-      markerZoomAnimation:true,
+      zoomAnimation:!reduceMotion,
+      fadeAnimation:!reduceMotion,
+      markerZoomAnimation:!reduceMotion,
       zoomSnap:.5,
       zoomDelta:.5,
       wheelPxPerZoomLevel:100,
       wheelDebounceTime:30,
-      inertia:true,
+      inertia:!reduceMotion,
       inertiaDeceleration:3400,
       easeLinearity:.2,
       preferCanvas:true,
@@ -107,8 +107,8 @@ export default function NetworkMap({stations=[],nodes=[],onSelect,full=false}){
     fitRef.current=()=>{
       const points=stationPoints(dataRef.current.stations);
       if(!points.length){map.setView(MUMBAI,12,{animate:false});return}
-      if(points.length===1){map.setView(points[0],14,{animate:true});return}
-      map.fitBounds(L.latLngBounds(points),{padding:[34,34],maxZoom:13,animate:true,duration:.55});
+      if(points.length===1){map.setView(points[0],14,{animate:!reduceMotion});return}
+      map.fitBounds(L.latLngBounds(points),{padding:[34,34],maxZoom:13,animate:!reduceMotion,duration:.55});
     };
 
     const observer=new ResizeObserver(()=>map.invalidateSize({animate:false}));

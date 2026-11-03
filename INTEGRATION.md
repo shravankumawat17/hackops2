@@ -7,7 +7,7 @@ Run from the repository root:
 ```powershell
 python -m pip install fastapi uvicorn httpx
 python backend/import_uploaded.py
-python -m uvicorn integration:app --app-dir backend --host 127.0.0.1 --port 8001
+python -m uvicorn integration:app --app-dir backend --host 127.0.0.1 --port 8002
 ```
 
 In another terminal:
@@ -17,7 +17,7 @@ cd frontend
 npm run dev -- --port 5174
 ```
 
-Open http://127.0.0.1:5174. The Vite proxy sends `/api` to port 8001. Use the existing local workspace login.
+Open http://127.0.0.1:5174. The Vite proxy sends `/api` to port 8002. Use the existing local workspace login.
 
 The importer creates an isolated SQLite compatibility database only if absent. It imports all 33 nodes, 672 readings and 14 complaints from AquaTrace_Database_Starter. Plant/street/building types and chlorine column names are translated to the uploaded schema; households remain distinct and intake targets a building. It never resets an existing database. The fixed evidence clock is November 6, 2026 at 20:00 Mumbai time. Latest-reading, forecast and clustering queries exclude later evidence.
 
@@ -28,3 +28,6 @@ Frontend cases, case history, submissions, updates and sensor values use HTTP. T
 Uploaded configured limits are illustrative references requiring official verification; they are not verified regulatory certifications. The previous frontend standards guidance also requires verification.
 
 Verification: `python backend/test_integration.py`, `npm run build` in frontend. The API test creates a synthetic complaint and updates its generated case in the compatibility database.
+
+Routing fix: backend/routing.py prioritizes upstream plant evidence, then counts distinct buildings on the shared segment. API packets include recipient role, owner and evidence. Industry receives plant cases; authorities coordinate pipeline/building/manual-review cases. The evidence selector changes the shared synthetic clock, so use it only in this local environment. Client queues refresh on role change, focus and every ten seconds. Workspace selection is not production authorization.
+

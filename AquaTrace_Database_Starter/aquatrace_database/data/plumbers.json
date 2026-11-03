@@ -1,0 +1,122 @@
+[
+  {
+    "id": "pl_01",
+    "name": "Vijay Jadhav",
+    "phone": "+91 90000 00010",
+    "lat": 19.14033,
+    "lon": 72.83299,
+    "rating": 3.8,
+    "specialty": "tank cleaning",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_02",
+    "name": "Ramesh Yadav",
+    "phone": "+91 90000 00011",
+    "lat": 19.01793,
+    "lon": 72.84706,
+    "rating": 4.2,
+    "specialty": "pipe repair",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_03",
+    "name": "Suresh Pawar",
+    "phone": "+91 90000 00012",
+    "lat": 19.1321,
+    "lon": 72.82554,
+    "rating": 4.0,
+    "specialty": "pipe repair",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_04",
+    "name": "Rafiq Gupta",
+    "phone": "+91 90000 00013",
+    "lat": 19.01548,
+    "lon": 72.84144,
+    "rating": 4.2,
+    "specialty": "general plumbing",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_05",
+    "name": "Suresh Pawar",
+    "phone": "+91 90000 00014",
+    "lat": 19.13513,
+    "lon": 72.82045,
+    "rating": 4.2,
+    "specialty": "tank cleaning",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_06",
+    "name": "Suresh Gupta",
+    "phone": "+91 90000 00015",
+    "lat": 19.0157,
+    "lon": 72.84917,
+    "rating": 3.6,
+    "specialty": "tank cleaning",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_07",
+    "name": "Mahesh Khan",
+    "phone": "+91 90000 00016",
+    "lat": 19.14576,
+    "lon": 72.8311,
+    "rating": 4.5,
+    "specialty": "general plumbing",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_08",
+    "name": "Salim Jadhav",
+    "phone": "+91 90000 00017",
+    "lat": 19.02561,
+    "lon": 72.8554,
+    "rating": 4.7,
+    "specialty": "filter install",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_09",
+    "name": "Rafiq Pawar",
+    "phone": "+91 90000 00018",
+    "lat": 19.1416,
+    "lon": 72.82632,
+    "rating": 4.2,
+    "specialty": "tank cleaning",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_10",
+    "name": "Santosh More",
+    "phone": "+91 90000 00019",
+    "lat": 19.00585,
+    "lon": 72.84432,
+    "rating": 4.4,
+    "specialty": "filter install",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_11",
+    "name": "Rafiq Jadhav",
+    "phone": "+91 90000 00020",
+    "lat": 19.14125,
+    "lon": 72.8187,
+    "rating": 3.8,
+    "specialty": "pipe repair",
+    "note": "FAKE DATA"
+  },
+  {
+    "id": "pl_12",
+    "name": "Nitin Gupta",
+    "phone": "+91 90000 00021",
+    "lat": 19.00837,
+    "lon": 72.85046,
+    "rating": 3.8,
+    "specialty": "general plumbing",
+    "note": "FAKE DATA"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "_comment": "Single source of truth for numeric limits. VERIFY every value against the official BIS IS 10500:2012 document before presenting. Automated findings support human judgment; they are not official regulatory decisions.",
+  "standard": "IS 10500:2012 (Second Revision), Drinking Water - Specification",
+  "city_context": "Brihanmumbai Municipal Corporation (BMC) distribution network",
+  "parameters": {
+    "ph": {
+      "label": "pH",
+      "unit": "",
+      "acceptable_min": 6.5,
+      "acceptable_max": 8.5,
+      "permissible_min": 6.5,
+      "permissible_max": 8.5,
+      "ideal": 7.0,
+      "direction": "range",
+      "wqi_weight": 0.20,
+      "note": "No relaxation permitted for pH."
+    },
+    "turbidity_ntu": {
+      "label": "Turbidity",
+      "unit": "NTU",
+      "acceptable_max": 1.0,
+      "permissible_max": 5.0,
+      "ideal": 0.0,
+      "direction": "max",
+      "wqi_weight": 0.25,
+      "note": "Acceptable 1 NTU; 5 NTU permissible only when no alternative source exists."
+    },
+    "tds_mgl": {
+      "label": "Total Dissolved Solids",
+      "unit": "mg/L",
+      "acceptable_max": 500,
+      "permissible_max": 2000,
+      "ideal": 0.0,
+      "direction": "max",
+      "wqi_weight": 0.15,
+      "note": "Acceptable 500 mg/L; 2000 mg/L permissible."
+    },
+    "residual_chlorine_mgl": {
+      "label": "Free Residual Chlorine",
+      "unit": "mg/L",
+      "minimum": 0.2,
+      "ideal": 0.5,
+      "direction": "min",
+      "wqi_weight": 0.20,
+      "note": "Process control parameter, not a health-based standard. 0.2 mg/L minimum at point of consumption - VERIFY."
+    },
+    "total_coliform": {
+      "label": "Total Coliform",
+      "unit": "per 100 mL",
+      "limit": "absent",
+      "direction": "micro",
+      "wqi_weight": 0.20,
+      "note": "Must be absent in 100 mL. Presence is an automatic worst-parameter override."
+    }
+  },
+  "wqi": {
+    "method": "weighted arithmetic sub-index, expressed as a RISK score",
+    "direction": "0 = perfect, 100 = worst. Higher is worse.",
+    "formula": "Qi = 100 * |Vi - ideal| / |limit - ideal| for max/min parameters; WQI = sum(wi * Qi) / sum(wi)",
+    "bands": [
+      { "max": 25, "label": "Good", "colour": "#1f9d55" },
+      { "max": 50, "label": "Acceptable", "colour": "#e0b100" },
+      { "max": 75, "label": "Poor", "colour": "#e07a00" },
+      { "max": 100, "label": "Unsafe", "colour": "#d13438" }
+    ],
+    "worst_parameter_override": {
+      "enabled": true,
+      "rule": "If ANY parameter is beyond its permissible limit, or E. coli / total coliform is present, the node cannot score better than Poor (band index >= 2).",
+      "required_ui": "Show the exact parameter that drove the rating."
+    },
+    "caveat": "Passing one parameter does not mean the water is safe."
+  }
+}

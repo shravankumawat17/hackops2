@@ -14,6 +14,7 @@
 ---
 
 ## Quick Links
+- **AquaTrace dashboard feature reference**: [Screenshot and implementation notes](design-system/references/water-quality-dashboard.md). Read when creating the water-quality overview.
 - **Agent Execution Protocol**: [`AGENT_FRONTEND_PROTOCOL.md`](file:///c:/hackathon/hackops/AGENT_FRONTEND_PROTOCOL.md)
 - **Theme Presets & CSS Variables**: [`design-system/themes.json`](file:///c:/hackathon/hackops/design-system/themes.json)
 - **Component Code & Specs Catalog**: [`design-system/components/README.md`](file:///c:/hackathon/hackops/design-system/components/README.md)

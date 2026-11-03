@@ -1,0 +1,3 @@
+from pathlib import Path
+p=Path('frontend/src/api.js');s=p.read_text().replace("recipientRole:routing?.role||'authority',id:c.id", "address:packet.address||packet.node?.name,recipientRole:routing?.role||'authority',id:c.id");p.write_text(s)
+p=Path('frontend/src/main.jsx');s=p.read_text().replace('address:locations[c.location]?.label||c.location','address:c.address||locations[c.location]?.label||c.location');s=s.replace("else {setBusy(true);setError('');Promise.resolve(onSubmit({...data,requestId:pending.current}))", "else {const key=JSON.stringify(data);if(pending.current.key!==key)pending.current={key,id:crypto.randomUUID()};setBusy(true);setError('');Promise.resolve(onSubmit({...data,requestId:pending.current.id}))");p.write_text(s)

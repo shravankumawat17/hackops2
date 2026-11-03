@@ -1,0 +1,6 @@
+from pathlib import Path
+p=Path('frontend/src/api.js');s=p.read_text();s+='\nexport async function selectEvidenceScenario(scenario){await request("/integration/scenario","POST",{scenario});return initialize()}\n';p.write_text(s)
+p=Path('frontend/src/main.jsx');s=p.read_text().replace('refreshCases,loadHistory}', 'refreshCases,loadHistory,selectEvidenceScenario}')
+s=s.replace('{connection}<button onClick=', '''{connection}<select aria-label="Synthetic evidence scenario" defaultValue="pipeline" onChange={e=>selectEvidenceScenario(e.target.value).then(d=>{setCases(d.cases);setNetworkNodes(d.nodes||[]);setConnection('Dataset clock: '+d.clock);setSelected(null);setPage('dashboard')}).catch(e=>setToast(e.message))}><option value="plant">Plant anomaly · Nov 5</option><option value="pipeline">Pipeline cluster · Nov 6</option><option value="home">Isolated report · Nov 7</option></select><button onClick=''')
+s=s.replace('<DataTable3 rows={rows} onOpen={openCase}/>', '''{role==='industry'&&rows.length===0&&<Alert10 title="No reports assigned to plant operators">Plant/source findings appear here when upstream evidence identifies a plant issue. Pipeline and building cases go to the responsible municipal or housing team. The selected dataset clock may have no plant anomaly.</Alert10>}<DataTable3 rows={rows} onOpen={openCase}/>''')
+p.write_text(s)

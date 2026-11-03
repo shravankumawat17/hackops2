@@ -1,0 +1,24 @@
+import { chromium } from '@playwright/test';
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1050}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:5174/');
+await page.screenshot({path:'screenshots/login.png',fullPage:true});
+await page.getByRole('button',{name:'Continue to citizen workspace'}).click();
+await page.getByRole('heading',{name:'Good to see you, Aarav.'}).waitFor();
+await page.screenshot({path:'screenshots/citizen.png',fullPage:true});
+await page.getByRole('button',{name:'Report an issue',exact:true}).first().click();
+await page.getByLabel('Flat / household').fill('502');await page.getByLabel('When did it begin?').fill('Today');
+await page.getByRole('button',{name:'Continue',exact:true}).click();await page.getByRole('button',{name:'Continue',exact:true}).click();await page.getByRole('button',{name:'Submit report'}).click();
+await page.getByRole('heading',{name:'Investigation summary'}).waitFor();
+await page.getByRole('button',{name:'Sign out'}).click();await page.getByRole('button',{name:'Authorities',exact:true}).click();await page.getByRole('button',{name:'Continue to authority workspace'}).click();
+await page.getByRole('button',{name:'Case management'}).click();await page.getByLabel('Search cases').fill('502');
+await page.getByRole('button',{name:'Discolored water',exact:true}).click();await page.getByLabel('Case status').selectOption('Resolved');await page.getByLabel('Action / resolution note').fill('Inspection completed; test sample reviewed.');await page.getByRole('button',{name:'Save update',exact:true}).click();
+await page.getByText('Inspection completed; test sample reviewed.',{exact:true}).waitFor();
+await page.getByRole('button',{name:'Sign out'}).click();await page.getByRole('button',{name:'Industries',exact:true}).click();await page.getByRole('button',{name:'Continue to industry workspace'}).click();await page.getByRole('button',{name:'Water readings',exact:true}).click();
+await page.getByRole('button',{name:'Factory / wastewater'}).click();await page.getByLabel('pH',{exact:true}).fill('7');await page.getByLabel('Turbidity (NTU)').fill('2');await page.getByLabel('TDS (mg/L)').fill('400');await page.getByLabel('Residual chlorine (mg/L)').fill('0.3');await page.getByRole('button',{name:'Save sample'}).click();await page.getByText('Permit review needed').waitFor();
+await page.screenshot({path:'screenshots/industry.png',fullPage:true});
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:'screenshots/mobile.png',fullPage:true});
+if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile horizontal overflow');
+if(errors.length)throw Error(errors.join('\n'));console.log('PASS: login, citizen intake, authority resolution, wastewater sample, mobile overflow, no runtime errors');await browser.close();
+

@@ -1,0 +1,302 @@
+{
+  "note": "SIMULATED network. Names are for realism only.",
+  "nodes": [
+    {
+      "id": "src_01",
+      "type": "source",
+      "name": "Upper Vaitarna Lake (simulated)",
+      "parent": null,
+      "lat": 19.75,
+      "lon": 73.35,
+      "has_sensor": false
+    },
+    {
+      "id": "plant_01",
+      "type": "plant",
+      "name": "Treatment Plant A (simulated)",
+      "parent": "src_01",
+      "lat": 19.22,
+      "lon": 72.97,
+      "has_sensor": true
+    },
+    {
+      "id": "res_01",
+      "type": "reservoir",
+      "name": "Service Reservoir 1 (simulated)",
+      "parent": "plant_01",
+      "lat": 19.1,
+      "lon": 72.9,
+      "has_sensor": true
+    },
+    {
+      "id": "zone_01",
+      "type": "zone",
+      "name": "K-West Zone (Andheri W), simulated",
+      "parent": "res_01",
+      "lat": 19.1364,
+      "lon": 72.8296,
+      "has_sensor": true
+    },
+    {
+      "id": "seg_01",
+      "type": "street_segment",
+      "name": "Street Segment 1",
+      "parent": "zone_01",
+      "lat": 19.13724,
+      "lon": 72.82675,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_01",
+      "type": "building_tank",
+      "name": "Building 1 Tank",
+      "parent": "seg_01",
+      "lat": 19.13679,
+      "lon": 72.8262,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_01",
+      "type": "household",
+      "name": "Flat 1",
+      "parent": "bld_01",
+      "lat": 19.13693,
+      "lon": 72.82631,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_02",
+      "type": "household",
+      "name": "Flat 2",
+      "parent": "bld_01",
+      "lat": 19.13703,
+      "lon": 72.82595,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_02",
+      "type": "building_tank",
+      "name": "Building 2 Tank",
+      "parent": "seg_01",
+      "lat": 19.13708,
+      "lon": 72.82581,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_03",
+      "type": "household",
+      "name": "Flat 3",
+      "parent": "bld_02",
+      "lat": 19.13691,
+      "lon": 72.82581,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_04",
+      "type": "household",
+      "name": "Flat 4",
+      "parent": "bld_02",
+      "lat": 19.1368,
+      "lon": 72.82563,
+      "has_sensor": false
+    },
+    {
+      "id": "seg_02",
+      "type": "street_segment",
+      "name": "Street Segment 2",
+      "parent": "zone_01",
+      "lat": 19.1373,
+      "lon": 72.82987,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_03",
+      "type": "building_tank",
+      "name": "Building 3 Tank",
+      "parent": "seg_02",
+      "lat": 19.13674,
+      "lon": 72.83005,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_05",
+      "type": "household",
+      "name": "Flat 5",
+      "parent": "bld_03",
+      "lat": 19.13693,
+      "lon": 72.82975,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_06",
+      "type": "household",
+      "name": "Flat 6",
+      "parent": "bld_03",
+      "lat": 19.13692,
+      "lon": 72.83017,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_04",
+      "type": "building_tank",
+      "name": "Building 4 Tank",
+      "parent": "seg_02",
+      "lat": 19.13698,
+      "lon": 72.82918,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_07",
+      "type": "household",
+      "name": "Flat 7",
+      "parent": "bld_04",
+      "lat": 19.13725,
+      "lon": 72.82908,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_08",
+      "type": "household",
+      "name": "Flat 8",
+      "parent": "bld_04",
+      "lat": 19.13674,
+      "lon": 72.82894,
+      "has_sensor": false
+    },
+    {
+      "id": "zone_02",
+      "type": "zone",
+      "name": "G-North Zone (Dadar), simulated",
+      "parent": "res_01",
+      "lat": 19.0178,
+      "lon": 72.8478,
+      "has_sensor": true
+    },
+    {
+      "id": "seg_03",
+      "type": "street_segment",
+      "name": "Street Segment 3",
+      "parent": "zone_02",
+      "lat": 19.01988,
+      "lon": 72.84842,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_05",
+      "type": "building_tank",
+      "name": "Building 5 Tank",
+      "parent": "seg_03",
+      "lat": 19.02049,
+      "lon": 72.84888,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_09",
+      "type": "household",
+      "name": "Flat 9",
+      "parent": "bld_05",
+      "lat": 19.02051,
+      "lon": 72.84916,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_10",
+      "type": "household",
+      "name": "Flat 10",
+      "parent": "bld_05",
+      "lat": 19.02042,
+      "lon": 72.84891,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_06",
+      "type": "building_tank",
+      "name": "Building 6 Tank",
+      "parent": "seg_03",
+      "lat": 19.02054,
+      "lon": 72.84866,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_11",
+      "type": "household",
+      "name": "Flat 11",
+      "parent": "bld_06",
+      "lat": 19.02076,
+      "lon": 72.84871,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_12",
+      "type": "household",
+      "name": "Flat 12",
+      "parent": "bld_06",
+      "lat": 19.02066,
+      "lon": 72.84839,
+      "has_sensor": false
+    },
+    {
+      "id": "seg_04",
+      "type": "street_segment",
+      "name": "Street Segment 4",
+      "parent": "zone_02",
+      "lat": 19.01617,
+      "lon": 72.84654,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_07",
+      "type": "building_tank",
+      "name": "Building 7 Tank",
+      "parent": "seg_04",
+      "lat": 19.01533,
+      "lon": 72.84601,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_13",
+      "type": "household",
+      "name": "Flat 13",
+      "parent": "bld_07",
+      "lat": 19.01509,
+      "lon": 72.84588,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_14",
+      "type": "household",
+      "name": "Flat 14",
+      "parent": "bld_07",
+      "lat": 19.01541,
+      "lon": 72.84593,
+      "has_sensor": false
+    },
+    {
+      "id": "bld_08",
+      "type": "building_tank",
+      "name": "Building 8 Tank",
+      "parent": "seg_04",
+      "lat": 19.01591,
+      "lon": 72.84596,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_15",
+      "type": "household",
+      "name": "Flat 15",
+      "parent": "bld_08",
+      "lat": 19.01577,
+      "lon": 72.84622,
+      "has_sensor": false
+    },
+    {
+      "id": "hh_16",
+      "type": "household",
+      "name": "Flat 16",
+      "parent": "bld_08",
+      "lat": 19.016,
+      "lon": 72.84603,
+      "has_sensor": false
+    }
+  ]
+}

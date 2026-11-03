@@ -1,0 +1,15 @@
+from pathlib import Path
+p=Path('frontend/src/main.jsx');s=p.read_text().replace("import MapView from './MapView';", "import MapView from './MapView';\nimport AddressFields from './AddressFields';\nimport {loadReportPoints,submitAddressReport} from './api';")
+s=s.replace("const [networkNodes,setNetworkNodes]=useState([]);", "const [reportPoints,setReportPoints]=useState([]),[reportWindow,setReportWindow]=useState('all');\nuseEffect(()=>{let active=true;const load=()=>loadReportPoints(reportWindow==='all'?null:24).then(d=>{if(active)setReportPoints(d.points)}).catch(e=>setToast(e.message));load();const t=setInterval(load,10000);return()=>{active=false;clearInterval(t)}},[reportWindow,cases.length]);\nconst [networkNodes,setNetworkNodes]=useState([]);")
+s=s.replace('stations={stations} nodes={networkNodes}', 'reports={reportPoints} stations={stations} nodes={networkNodes}')
+s=s.replace('onSubmit={data=>submitReport(data,data.requestId)', 'onSubmit={data=>submitAddressReport(data,data.requestId)')
+a=s.index('<label>Building / neighborhood<select');b=s.index('<div className="field-grid">',a)
+s=s[:a]+'<AddressFields data={data} onChange={patch=>setData(prev=>({...prev,...patch}))}/>'+s[b:]
+s=s.replace('{locations[data.location].label}',"{[data.address,data.locality,data.area].filter(Boolean).join(', ')}")
+s=s.replace('Your building helps us trace the connected supply path.', 'Select your locality, enter your address and confirm its map pin.')
+s=s.replace('Your report remains in this browser.', 'Your report and confirmed location are saved to the backend.')
+s=s.replace("onChange={e=>field('location',e.target.value)}", "onChange={e=>field('location',e.target.value)}")
+s=s.replace('<small>Google Maps basemap</small>', '''<label className="report-window">Reports<select aria-label="Report density time range" value={reportWindow} onChange={e=>setReportWindow(e.target.value)}><option value="all">All reports to dataset clock</option><option value="24">Past 24 hours</option></select></label><small>Red: 5+ reports / 500 m. Counts are not verified users.</small>''')
+s=s.replace("const updated", "const updated")
+p.write_text(s)
+p=Path('frontend/src/api.js');s=p.read_text().replace("flat:'Building report'", "flat:packet.address||'Building report'");s=s.replace("nodes.filter(n=>n.type==='building').forEach(n=>locations[n.id]={label:n.name});", "nodes.filter(n=>n.type==='building').forEach(n=>locations[n.id]={label:n.name});");p.write_text(s)

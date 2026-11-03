@@ -1,0 +1,59 @@
+{
+  "standard": "IS 10500:2012 (Drinking Water Specification)",
+  "disclaimer": "Verify against official BIS document. Acceptable limit is preferred; permissible limit applies only in absence of alternate sources.",
+  "parameters": {
+    "pH": {
+      "name": "pH",
+      "unit": "",
+      "min_acceptable": 6.5,
+      "max_acceptable": 8.5,
+      "min_permissible": 6.5,
+      "max_permissible": 8.5,
+      "relaxation": false,
+      "action_on_breach": "Inspect chemical dosing, buffer treatment, or check source contamination."
+    },
+    "turbidity_NTU": {
+      "name": "Turbidity",
+      "unit": "NTU",
+      "max_acceptable": 1.0,
+      "max_permissible": 5.0,
+      "relaxation": true,
+      "action_on_breach": "Inspect filtration bed, flush line, check for pipe rupture or cross-contamination."
+    },
+    "TDS_mgL": {
+      "name": "Total Dissolved Solids (TDS)",
+      "unit": "mg/L",
+      "max_acceptable": 500,
+      "max_permissible": 2000,
+      "relaxation": true,
+      "action_on_breach": "Check source water blending ratio or reverse osmosis membrane integrity."
+    },
+    "residual_chlorine_mgL": {
+      "name": "Free Residual Chlorine",
+      "unit": "mg/L",
+      "min_acceptable": 0.2,
+      "max_acceptable": 1.0,
+      "min_permissible": 0.2,
+      "max_permissible": 2.0,
+      "relaxation": false,
+      "action_on_breach": "Increase booster chlorination at distributor reservoir or flush stagnation dead-ends."
+    },
+    "total_coliform": {
+      "name": "Total Coliform Bacteria",
+      "unit": "MPN/100mL",
+      "max_acceptable": 0,
+      "max_permissible": 0,
+      "relaxation": false,
+      "action_on_breach": "CRITICAL: Issue immediate boil water advisory and perform hyperchlorination."
+    },
+    "e_coli": {
+      "name": "Escherichia coli (E. coli)",
+      "unit": "Presence/100mL",
+      "max_acceptable": 0,
+      "max_permissible": 0,
+      "relaxation": false,
+      "action_on_breach": "CRITICAL: Isolate branch immediately, alert health authorities, and issue public advisory."
+    }
+  }
+}
+

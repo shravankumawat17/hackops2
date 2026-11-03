@@ -23,6 +23,7 @@ This folder contains the complete `.tsx` source code and `.md` specs for all app
 ---
 
 ## 📦 Bento Grids, Cards & Accordions
+- [**XYFlow Agent Canvas Theme**](./xyflow-canvas.md) ([../xyflow-theme.css](../xyflow-theme.css)) — Full node graph canvas theme for @xyflow/react with custom nodes, handles, edges, and control styles.
 - [**Bento02**](./bento-02.md) ([`bento-02/index.tsx`](./bento-02/index.tsx)) — High-polish interactive bento grid with dynamic map card, analytics preview, and motion transitions.
 - [**AgentBentoGrid**](./agent-bento-grid.md) ([`agent-bento-grid.tsx`](./agent-bento-grid.tsx)) — 5-card AI agent workspace bento grid (chat, playground, activity log, vector search, tool telemetry).
 - [**ResearchBentoGrid**](./research-bento-grid.md) ([`research-bento-grid.tsx`](./research-bento-grid.tsx)) — Tech-stack showcase with brand logo rotators, live pricing slider, and pause/resume sprint toggle.

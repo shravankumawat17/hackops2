@@ -59,6 +59,7 @@
 - [**StaggerText**](./components/stagger-text.md) ([Source](./components/stagger-text.tsx)) — Viewport-triggered masked slide-up text reveal by word or letter.
 
 ### 📦 Bento Grids, Cards & Accordions
+- [**XYFlow Agent Canvas Theme**](./components/xyflow-canvas.md) ([Source](./xyflow-theme.css)) — Full node graph canvas theme for @xyflow/react with custom nodes, handles, edges, and control styles.
 - [**Bento02**](./components/bento-02.md) ([Source](./components/bento-02/index.tsx)) — Interactive bento grid with dynamic map card, analytics preview, and motion transitions.
 - [**AgentBentoGrid**](./components/agent-bento-grid.md) ([Source](./components/agent-bento-grid.tsx)) — Comprehensive 5-card AI agent workspace bento grid.
 - [**ResearchBentoGrid**](./components/research-bento-grid.md) ([Source](./components/research-bento-grid.tsx)) — Tech-stack showcase with brand logo rotators, live pricing slider card, and pause/resume sprint toggle.

@@ -2710,3 +2710,32 @@ dd {
   margin-left: 6px;
   animation: fadeUp .2s ease;
 }
+
+
+/* ─── Notice Info & Badges ───────────────────────────────────── */
+.notice-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.notice-pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4b8069;
+  box-shadow: 0 0 0 3px rgba(75, 128, 105, 0.25);
+  animation: pulse-ring 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.notice-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 9px;
+  font-size: 10px;
+  font-weight: 650;
+  border-radius: 12px;
+  background: #e2ede2;
+  color: #2b563f;
+  border: 1px solid #cadfca;
+  letter-spacing: 0.1px;
+}
